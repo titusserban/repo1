@@ -3,12 +3,12 @@ import random
 lista = ["abracadabra", "bomboane", "rubrica", "versiune", "amiabil"]
 
 
-def alegere_cuvant_din_lista() -> list:
+def alegere_cuvant_din_lista(any_list: list) -> list:
     """
 
     :return: se alege aleatoriu un cuvant din lista
     """
-    cuvant_ales = random.choice(lista).upper()
+    cuvant_ales = random.choice(any_list).upper()
     return list(cuvant_ales)
 
 
@@ -48,7 +48,7 @@ def stadiul_jocului():
     print(f"Caractere deja incercate: {caractere_deja_incercate}")
 
 
-cuvant = alegere_cuvant_din_lista()
+cuvant = alegere_cuvant_din_lista(lista)
 cuvant_ascuns = ascunderea_literelor(cuvant)
 incercari = 0
 total_incercari = 7
